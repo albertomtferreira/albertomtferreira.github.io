@@ -1,24 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.9c2a174b.css",
-    "main.js": "/static/js/main.2f4ad95a.js",
-    "static/js/592.32f8d1ed.chunk.js": "/static/js/592.32f8d1ed.chunk.js",
-    "static/media/song.png": "/static/media/song.ee539ce2ade7efb12685.png",
+    "main.js": "/static/js/main.270fee6e.js",
+    "static/js/592.4c532a8e.chunk.js": "/static/js/592.4c532a8e.chunk.js",
     "static/media/Mess.png": "/static/media/Mess.9a3e6d452dc5107ebaef.png",
-    "static/media/advise.png": "/static/media/advise.7c27cb79f9d03782c40e.png",
     "static/media/restcountries.jpg": "/static/media/restcountries.5aa0a69978cc2d883e3b.jpg",
     "static/media/alberto.svg": "/static/media/alberto.910627846bc9f7815df09391b9f272c9.svg",
     "static/media/Chat_me.png": "/static/media/Chat_me.412ea7b4f6924f887749.png",
-    "static/media/spacetourism.jpg": "/static/media/spacetourism.0bf7257c65a99597f087.jpg",
-    "static/media/s3.jpg": "/static/media/s3.b2a59160f3284474a734.jpg",
-    "static/media/todo.jpg": "/static/media/todo.393d0fe27b7804b4b77f.jpg",
+    "static/media/color_generator.png": "/static/media/color_generator.2ec66f22244b1bb906b7.png",
+    "static/media/accordion.png": "/static/media/accordion.a22c8276ea89ba254287.png",
     "index.html": "/index.html",
     "main.9c2a174b.css.map": "/static/css/main.9c2a174b.css.map",
-    "main.2f4ad95a.js.map": "/static/js/main.2f4ad95a.js.map",
-    "592.32f8d1ed.chunk.js.map": "/static/js/592.32f8d1ed.chunk.js.map"
+    "main.270fee6e.js.map": "/static/js/main.270fee6e.js.map",
+    "592.4c532a8e.chunk.js.map": "/static/js/592.4c532a8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c2a174b.css",
-    "static/js/main.2f4ad95a.js"
+    "static/js/main.270fee6e.js"
   ]
 }
