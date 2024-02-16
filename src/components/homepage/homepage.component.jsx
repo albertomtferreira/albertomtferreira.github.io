@@ -4,8 +4,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 import Animation from "../../assets/lotties/AnimationReact.json";
 import About from "../about/about.component";
-import ProjectsCompleted from "../projects/projects.component";
-import ProjectsInProgress from "../projects/projects_in_progress.component";
+import SmallProjects from "../projects/smallprojetcs.component";
+import LargeProjects from "../projects/largeprojects.component";
 import Contact from "../contact/contact.component";
 import Footter from "../footer/footer.component";
 
@@ -36,8 +36,9 @@ export default function Homepage() {
             </div>
           </div>
           <About />
-          <ProjectsInProgress />
-          <ProjectsCompleted />
+          <SmallProjects />
+          <LargeProjects />
+
           <Contact />
           <Footter />
         </div>

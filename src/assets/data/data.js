@@ -1,17 +1,37 @@
 
 import RestCountries from "../portfolioImages/restcountries.jpg";
-import SpaceTourism from "../portfolioImages/spacetourism.jpg";
-import Advice from "../portfolioImages/advise.png";
-
-import AWS from "../portfolioImages/s3.jpg";
-import Todo from "../portfolioImages/todo.jpg"
 import Chat_me from "../portfolioImages/Chat_me.png"
 import Messmitra from "../portfolioImages/Mess.png"
-import song from "../portfolioImages/song.png"
+import { FaCss3, FaHtml5, FaReact, FaJs } from "react-icons/fa";
+import ColorGenerator from "../images/color_generator.png"
+
+import Accordion from "../images/accordion.png";
+
+const SmallProjects = [
+  {
+    id: "color_generator",
+    img: ColorGenerator,
+    name: "Random Color Generator",
+    stack: [<FaReact size={25} />, <FaHtml5 size={25} />, <FaCss3 size={25} />, <FaJs size={25} />],
+    live: "https://www.youtube.com/watch?v=5ZdHfJVAY-s&t=1882s",
+    source: "https://github.com/albertomtferreira/reactjs-projects/tree/master/src/components/color_generator",
+    description:
+      "Dive into generating dynamic colors and learn about state management"
+  }, {
+    id: "accordion",
+    img: Accordion,
+    name: "Accordion",
+    stack: [<FaReact size={25} />, <FaHtml5 size={25} />, <FaCss3 size={25} />, <FaJs size={25} />],
+    live: "https://www.youtube.com/watch?v=5ZdHfJVAY-s&t=482s",
+    source: "https://github.com/albertomtferreira/reactjs-projects/tree/master/src/components/accordian",
+    description:
+      "Learn to create interactive collapsible content panels"
+  }
+];
 
 
 
-const InprogressProjectsData = [
+const LargeProjects = [
   {
     id: "rest-countries",
     img: Messmitra,
@@ -34,88 +54,4 @@ const InprogressProjectsData = [
   },
 ]
 
-const ProjectsData = [
-  {
-    id: "rest-countries",
-    img: Messmitra,
-    name: "Mess-Mitra",
-    stack: ["< Html/>", "< Css />", "< Js />", "</React>", "</Mongo Db>", "</Express>", "</Node Js>", "</Cloudinary>"],
-    live: "https://github.com/Siddhesh7777/bluebit",
-    source: "https://github.com/Siddhesh7777/bluebit",
-    description:
-      "A user-friendly website intended to support bachelors who migrate to new places discovering different food mess services that are readily available in their area.  "
-  },
-  {
-    id: "rest-countries",
-    img: Chat_me,
-    name: "Chat_me",
-    stack: ["< Html/>", "< Css />", "< Js />", "</React>", "</Mongo Db>", "</Express>", "</Node Js>", "</Cloudinary>", "</Socket I.O>"],
-    live: "https://github.com/Siddhesh7777/Chat_Me_Final",
-    source: "https://github.com/Siddhesh7777/Chat_Me_Final",
-    description:
-      "The Chat_me Application is a real-time chat platform that allows users to communicate with each other individually or in group chats. This  is built using the MERN stack.",
-  },
-
-  {
-    id: "rest-countries",
-    img: RestCountries,
-    name: "Book-Mate",
-    stack: ["< Html/>", "< Css />", "< Js />"],
-    live: "https://bookmate1.netlify.app/",
-    source: "https://github.com/Siddhesh7777/bookmate",
-    description:
-      "website that can sell and buy the old books by which one can buy the books at the affordable price.",
-  },
-
-
-  {
-    id: "Exercise Manager Mern",
-    img: AWS,
-    name: "Mern Exercise Tracker",
-    stack: ["< MERN /> "],
-    live: "https://github.com/Siddhesh7777/Exercise-Manager-MERN",
-    source: "https://github.com/Siddhesh7777/Exercise-Manager-MERN",
-    description:
-      "store and retrive and add data and make work on the exercise data and tracks the exercise data that the user  want",
-  },
-
-  ,
-
-
-  {
-    id: "todo",
-    img: Todo,
-    name: "React Todo App",
-    stack: ["< React/>  ", "< css />"],
-    live: "https://todoreactsid.netlify.app/",
-    source: "https://github.com/Siddhesh7777/To_do-React",
-    description:
-      "React JS todo app that Enables users to add, delete, filter, and clear day-to-day tasks. It has user-friendly interface and navigation",
-  },
-  {
-    id: "space-tourism",
-    img: SpaceTourism,
-    name: "Chat  me Real time Application",
-    stack: ["< html css />", "< node js/>"],
-    live: "https://chatmesd.netlify.app/",
-    source: "https://github.com/Siddhesh7777/Chat-Me-Realtime-App",
-    description:
-      "Real time Chat Application User can Talk to each other with realtime to it.",
-  },
-  {
-    id: "advice-generator",
-    img: song,
-    name: "Anime Music player",
-    stack: ["< html/>", "< css />", "< JavaScript />"],
-    live: "https://animemus.netlify.app",
-    source: "https://github.com/Siddhesh7777/digi-anime-musci-player",
-    description:
-      "A Music player which can play ,Pause ,Rewind,Next and having different song album to it using Html,Css And JavaScript",
-  }
-
-
-];
-
-
-
-export default { ProjectsData, InprogressProjectsData }
+export default { SmallProjects, LargeProjects }

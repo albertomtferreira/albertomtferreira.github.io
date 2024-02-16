@@ -3,13 +3,13 @@ import data from "../../assets/data/data";
 
 import ProjectsCard from "./projects_card.component";
 
-const ProjectsInProgress = () => {
+const LargeProjects = () => {
   return (
     <div className="container-fluid bg-light p-5 min-vh-100">
       <div className="row">
         {/* IN PROGRESS */}
-        <h2 className="custom-font pb-3 text-center">In Progress: </h2>
-        {data.InprogressProjectsData.map((project) => {
+        <h2 className="custom-font pb-3 text-center">Large Projects: </h2>
+        {data.LargeProjects.map((project) => {
           return (
             <div
               className="col-12 d-flex justify-content-center"
@@ -32,4 +32,4 @@ const ProjectsInProgress = () => {
   );
 };
 
-export default ProjectsInProgress;
+export default LargeProjects;

@@ -9,21 +9,12 @@ export default function About() {
           environment than IT!
         </h5>
         <p className="text-jusify lead m-4">
-          Ever since we got our first PC at home to share with my sisters, I've
-          had a passion for IT. I was about 9 or 10 years old at the time, and
-          the arrival of an IT company that delivered and left us with some card
-          boxes sparked my interest in the field. We had no idea what to do with
-          them at the time, but that's where my journey began, with a Windows
-          3.11 operating system. Over the years, I've had many adventures and
-          misadventures in IT, which I may detail sometime in the future. Fast
-          forward to 2020, I decided to get back into coding and development,
-          and enrolled in an e-learning platform called{" "}
-          <a href="https://www.udemy.com/">Udemy</a>. I attended some trainings
-          from <a href="https://github.com/aneagoie">Andrei Neagoie</a> and his
-          team at
-          <a href="https://github.com/zero-to-mastery">Zero to Mastery</a>, and
-          I found that coding and being able to produce something from scratch
-          is a passion and a therapy after intense days at work.
+          I became interested in IT when we got our first PC at home when I was
+          9 or 10. Over the years, I've had many experiences in the field. In
+          2020, I enrolled in <a href="https://www.udemy.com/">Udemy</a> and
+          received training from{" "}
+          <a href="https://github.com/zero-to-mastery">Zero to Mastery</a>. I
+          discovered that coding is a passion and therapeutic relief after work.
         </p>
 
         <a

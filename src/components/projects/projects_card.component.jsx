@@ -10,6 +10,7 @@ function ProjectsCard({ id, image, name, stack, live, source, desc }) {
           <div className="">
             <img
               src={image}
+              width="300px"
               className="img-fluid rounded-start project-img"
               alt={name}
             />

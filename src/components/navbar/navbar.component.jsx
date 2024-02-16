@@ -58,14 +58,44 @@ export default function NavBar() {
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <NavLink to="/projectsinprogress" className="nav-link">
-                      Projects in Progress
+                    <NavLink to="/smallprojects" className="nav-link">
+                      Small Projects
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/projectscompleted" className="nav-link">
-                      Projects Completed
+                    <NavLink to="/largeprojects" className="nav-link">
+                      Large Projects
                     </NavLink>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hobbies
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      className="nav-link"
+                      href="https://albertomtferreira.github.io/tao-reiki/"
+                      target="_blank"
+                    >
+                      Tao Reiki
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="nav-link"
+                      href="https://albertomtferreira.github.io/bread-mate/"
+                      target="_blank"
+                    >
+                      Bread Mate
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -75,9 +105,6 @@ export default function NavBar() {
                 </NavLink>
               </li>
             </ul>
-            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-              <button class="btn btn-primary">Button</button>
-            </div>
           </div>
         </div>
       </nav>

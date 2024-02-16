@@ -3,13 +3,13 @@ import data from "../../assets/data/data";
 
 import ProjectsCard from "./projects_card.component";
 
-const ProjectsCompleted = () => {
+const SmallProjects = () => {
   return (
     <div className="container-fluid bg-light p-5 min-vh-100">
       <div className="row">
         {/* COMPLETED */}
-        <h2 className="custom-font pb-5 text-center">Completed: </h2>
-        {data.ProjectsData.map((project) => {
+        <h2 className="custom-font pb-5 text-center">Small Projects: </h2>
+        {data.SmallProjects.map((project) => {
           return (
             <div
               className="col-12 d-flex justify-content-center"
@@ -32,4 +32,4 @@ const ProjectsCompleted = () => {
   );
 };
 
-export default ProjectsCompleted;
+export default SmallProjects;
