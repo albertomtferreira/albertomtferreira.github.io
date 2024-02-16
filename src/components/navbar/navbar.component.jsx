@@ -7,10 +7,13 @@ import "./navbar.style.css";
 export default function NavBar() {
   return (
     <>
-      <nav className="navbar navbar-expand-md bg-body-tertiary rounded">
-        <div className="container-fluid  ">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary rounded"
+        aria-label="Thirteenth navbar example"
+      >
+        <div class="container-fluid">
           <button
-            className="navbar-toggler"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarsExample11"
@@ -18,10 +21,10 @@ export default function NavBar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse d-lg-flex">
+          <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
             <img
               src={alberto}
               alt="logo"
@@ -72,6 +75,9 @@ export default function NavBar() {
                 </NavLink>
               </li>
             </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+              <button class="btn btn-primary">Button</button>
+            </div>
           </div>
         </div>
       </nav>
