@@ -82,7 +82,7 @@ export default function NavBar() {
                   <li>
                     <a
                       className="nav-link"
-                      href="https://albertomtferreira.github.io/tao-reiki/"
+                      href="https://taoreiki.org"
                       target="_blank"
                     >
                       Tao Reiki
@@ -91,7 +91,7 @@ export default function NavBar() {
                   <li>
                     <a
                       className="nav-link"
-                      href="https://albertomtferreira.github.io/bread-mate/"
+                      href="https://breadmate.netlify.app/"
                       target="_blank"
                     >
                       Bread Mate
