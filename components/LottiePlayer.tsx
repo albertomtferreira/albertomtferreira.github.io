@@ -1,13 +1,15 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { CSSProperties } from "react";
+import type { LottieOptions } from "lottie-react";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 interface LottiePlayerProps {
-  src: any; // JSON animation data
+  src: LottieOptions["animationData"]; // JSON animation data
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
 export default function LottiePlayer({
