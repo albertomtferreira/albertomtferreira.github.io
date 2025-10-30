@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { useRef, FormEvent, useState } from 'react';
-import LottiePlayer from '@/components/LottiePlayer';
-import emailjs from '@emailjs/browser';
-import toast from 'react-hot-toast';
+import { useRef, FormEvent, useState } from "react";
+import LottiePlayer from "@/components/LottiePlayer";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -13,25 +14,25 @@ export default function Contact() {
   const validateForm = (formData: FormData): boolean => {
     const newErrors: Record<string, string> = {};
 
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const subject = formData.get('subject') as string;
-    const message = formData.get('message') as string;
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
 
     if (!name || name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters';
+      newErrors.name = "Name must be at least 2 characters";
     }
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = "Please enter a valid email address";
     }
 
     if (!subject || subject.trim().length < 3) {
-      newErrors.subject = 'Subject must be at least 3 characters';
+      newErrors.subject = "Subject must be at least 3 characters";
     }
 
     if (!message || message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = "Message must be at least 10 characters";
     }
 
     setErrors(newErrors);
@@ -46,7 +47,7 @@ export default function Contact() {
     const formData = new FormData(form.current);
 
     if (!validateForm(formData)) {
-      toast.error('Please fix the errors in the form');
+      toast.error("Please fix the errors in the form");
       return;
     }
 
@@ -54,20 +55,24 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_9c5a64n',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_zrfukag',
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_9c5a64n",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_zrfukag",
         form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'aEwIOQV4EQvfL485S'
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "aEwIOQV4EQvfL485S"
       )
       .then(
         () => {
-          toast.success('Message sent successfully! I\'ll get back to you soon.');
+          toast.success(
+            "Message sent successfully! I'll get back to you soon."
+          );
           form.current?.reset();
           setErrors({});
         },
         (error) => {
-          console.error('EmailJS error:', error);
-          toast.error('Failed to send message. Please try again or contact me directly.');
+          console.error("EmailJS error:", error);
+          toast.error(
+            "Failed to send message. Please try again or contact me directly."
+          );
         }
       )
       .finally(() => {
@@ -80,14 +85,21 @@ export default function Contact() {
       <h2 className="custom-font pb-5 text-center">Get In Touch</h2>
       <div className="d-sm-flex align-items-start justify-content-center gap-5">
         <div>
-          <form ref={form} onSubmit={sendEmail} className="contact-form" noValidate>
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="contact-form"
+            noValidate
+          >
             <div className="mb-4">
               <label htmlFor="name" className="form-label fw-semibold">
                 Name <span className="text-danger">*</span>
               </label>
               <input
                 id="name"
-                className={`form-control form-class shadow-sm ${errors.name ? 'is-invalid' : ''}`}
+                className={`form-control form-class shadow-sm ${
+                  errors.name ? "is-invalid" : ""
+                }`}
                 placeholder="Your name"
                 type="text"
                 name="name"
@@ -104,7 +116,9 @@ export default function Contact() {
               </label>
               <input
                 id="email"
-                className={`form-control form-class shadow-sm ${errors.email ? 'is-invalid' : ''}`}
+                className={`form-control form-class shadow-sm ${
+                  errors.email ? "is-invalid" : ""
+                }`}
                 placeholder="your.email@example.com"
                 type="email"
                 name="email"
@@ -122,7 +136,9 @@ export default function Contact() {
               <input
                 id="subject"
                 placeholder="What's this about?"
-                className={`form-control form-class shadow-sm ${errors.subject ? 'is-invalid' : ''}`}
+                className={`form-control form-class shadow-sm ${
+                  errors.subject ? "is-invalid" : ""
+                }`}
                 type="text"
                 name="subject"
                 disabled={isLoading}
@@ -140,7 +156,9 @@ export default function Contact() {
                 id="message"
                 placeholder="Your message here..."
                 name="message"
-                className={`form-control form-class shadow-sm ${errors.message ? 'is-invalid' : ''}`}
+                className={`form-control form-class shadow-sm ${
+                  errors.message ? "is-invalid" : ""
+                }`}
                 rows={5}
                 disabled={isLoading}
               />
@@ -157,20 +175,25 @@ export default function Contact() {
             >
               {isLoading ? (
                 <>
-                  <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  <span
+                    className="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
                   Sending...
                 </>
               ) : (
-                'Send Message'
+                "Send Message"
               )}
             </button>
           </form>
         </div>
         <div className="d-none d-lg-block">
-          <LottiePlayer
+          <DotLottieReact
             src="/lotties/AnimationContact.json"
-            className="player"
-            style={{ maxHeight: '500px', maxWidth: '500px' }}
+            style={{ height: "400px" }}
+            loop
+            autoplay
           />
         </div>
       </div>

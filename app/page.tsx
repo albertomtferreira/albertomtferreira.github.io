@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import LottiePlayer from "@/components/LottiePlayer";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Homepage() {
   return (
@@ -19,10 +19,11 @@ export default function Homepage() {
             </Link>
           </div>
           <div>
-            <LottiePlayer
-              src="/lotties/AnimationReact.json"
-              className="player"
-              style={{ maxHeight: "500px", maxWidth: "500px" }}
+            <DotLottieReact
+              src="/lotties/Animation-new.json"
+              style={{ height: "400px" }}
+              loop
+              autoplay
             />
           </div>
         </div>
