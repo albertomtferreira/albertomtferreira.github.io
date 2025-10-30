@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import LottiePlayer from '@/components/LottiePlayer';
+import Link from "next/link";
+import LottiePlayer from "@/components/LottiePlayer";
 
 export default function Homepage() {
   return (
