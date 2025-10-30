@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -32,7 +33,7 @@ export default function Navbar() {
           />
           <span className="navbar-brand col-lg-3 me-0">Alberto&apos;s Portfolio</span>
 
-          <ul className="navbar-nav col-lg-6 justify-content-lg-center">
+          <ul className="navbar-nav col-lg-5 justify-content-lg-center">
             <li className="nav-item">
               <Link
                 href="/"
@@ -50,65 +51,13 @@ export default function Navbar() {
                 About
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <li className="nav-item">
+              <Link
+                href="/projects"
+                className={`nav-link ${pathname?.startsWith('/projects') ? 'active' : ''}`}
               >
                 Projects
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link
-                    href="/projects/small"
-                    className={`nav-link ${pathname === '/projects/small' ? 'active' : ''}`}
-                  >
-                    Small Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/projects/large"
-                    className={`nav-link ${pathname === '/projects/large' ? 'active' : ''}`}
-                  >
-                    Large Projects
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Hobbies
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a
-                    className="nav-link"
-                    href="https://taoreiki.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Tao Reiki
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="nav-link"
-                    href="https://breadmate.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Bread Mate
-                  </a>
-                </li>
-              </ul>
+              </Link>
             </li>
             <li className="nav-item">
               <Link
@@ -119,6 +68,10 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
+
+          <div className="d-flex align-items-center ms-auto">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </nav>

@@ -12,9 +12,9 @@ export default function Homepage() {
             <h1>Hello! I am Alberto</h1>
             <h1 className="fw-bold custom-font">Web Developer & Coder.</h1>
             <p className="pt-5">Full stack Development</p>
-            <Link href="/projects/large">
+            <Link href="/projects">
               <button className="btn btn-primary custom-btn ps-5 pe-5 fw-bold mt-2">
-                My Work
+                View My Projects
               </button>
             </Link>
           </div>
